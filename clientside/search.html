@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Events - Charity Events</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="search.html" class="active">Search Events</a>
+    </nav>
+
+    <header>
+        <h1>Search Charity Events</h1>
+        <p class="mission">Find events by date, location, or category</p>
+    </header>
+
+    <section>
+        <form id="search-form" class="search-form">
+            <div class="form-row">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date">
+            </div>
+
+            <div class="form-row">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" 
+                       placeholder="e.g. Sydney, Melbourne">
+            </div>
+
+            <div class="form-row">
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                    <option value="">All Categories</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">🔍 Search</button>
+                <button type="button" id="clear-btn" class="btn-secondary">Clear Filters</button>
+            </div>
+        </form>
+
+        <div id="results-info" class="results-info"></div>
+        <div id="results" class="events-grid"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Charity Events. All rights reserved.</p>
+    </footer>
+
+    <script src="js/search.js"></script>
+</body>
+</html>
