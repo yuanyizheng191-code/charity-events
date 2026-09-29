@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - Charity Events</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="search.html">Search Events</a>
+    </nav>
+
+    <section id="event-detail-section">
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading">Loading event details...</div>
+
+        <!-- Event Details -->
+        <div id="event-content" style="display:none;">
+            <a href="index.html" class="back-link">← Back to Events</a>
+
+            <div class="event-detail-header">
+                <img id="event-image" src="" alt="" class="event-hero-image"
+                     onerror="this.style.display='none'">
+                <div class="event-detail-title">
+                    <span id="event-category" class="category-tag"></span>
+                    <h1 id="event-name"></h1>
+                    <p id="event-org" class="event-org"></p>
+                </div>
+            </div>
+
+            <div class="event-detail-grid">
+                <!-- Event Main Content -->
+                <div class="event-main">
+                    <h2>About This Event</h2>
+                    <p id="event-full-description" class="full-description"></p>
+
+                    <h2>Purpose</h2>
+                    <p id="event-purpose" class="purpose"></p>
+
+                    <h2>Fundraising Progress</h2>
+                    <div class="progress-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                    <p id="progress-text" class="progress-text"></p>
+                </div>
+
+                <!-- Event Sidebar Content -->
+                <aside class="event-sidebar">
+                    <div class="info-card">
+                        <h3>📅 Date & Time</h3>
+                        <p id="event-date"></p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📍 Location</h3>
+                        <p id="event-location"></p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🎟️ Ticket Price</h3>
+                        <p id="ticket-price" class="ticket-price"></p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🏢 Organised By</h3>
+                        <p id="org-name"></p>
+                        <p id="org-contact" class="small"></p>
+                    </div>
+
+                    <button id="register-btn" class="btn-register">
+                        Register for This Event
+                    </button>
+                </aside>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-msg" class="error" style="display:none;"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Charity Events. All rights reserved.</p>
+    </footer>
+
+    <script src="js/event.js"></script>
+</body>
+</html>
